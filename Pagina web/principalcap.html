@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Capitulo ProCop-UPAEP</title>
+	<style>
+		a:link {color:white;}
+		a:visited{color: green;}
+		a:active{color: red;}
+		#header {
+			margin: auto;
+			width: 80%;
+		}
+		ul, ol{
+			list-style: none;
+		}
+		.nav li a {
+			background-color: grey;
+			color: white;
+			text-decoration: none;
+			padding: 10px 15px;
+			display: block;
+		}
+		.nav > li {
+			float: left;
+		}
+		.nav li a:hover{
+			background-color: #434343;
+		}
+		.nav li ul {
+			display: none;
+			position: absolute;
+			min-width: 140px;
+		}
+		.nav li:hover > ul{
+			padding: 0px;
+			display: block;
+		}
+	</style>
+	<script type="text/javascript">
+		var cont=0,car=1;
+		function cambia(){
+			if(cont==0){
+				document.getElementById("imgprincipal").src="imagenes/cartel1.png";
+				cont++
+				car=1;
+			}
+			else if(cont==1){
+				document.getElementById("imgprincipal").src="imagenes/cartel2.png";
+				cont++
+				car=2
+			}
+			else{
+				document.getElementById("imgprincipal").src="imagenes/cartel3.png";
+				cont=0;
+				car=3;
+			}
+		}
+		function seleccion(tipo){
+			if(tipo== 1){
+				document.getElementById("imgprincipal").src="imagenes/cartel1.png";
+				cont=0;
+				car=1;
+			}
+			else if( tipo == 2){
+				document.getElementById("imgprincipal").src="imagenes/cartel2.png";
+				cont=1;
+				car=2;
+			}
+			else{
+				document.getElementById("imgprincipal").src="imagenes/cartel3.png";
+				cont=2;
+				car=3;
+			}
+		}
+
+		function inicio(){
+			setInterval(cambia,10000);
+		}
+		function pagoficial(){
+			if(car==1){
+				window.open("http://geeks.e-consulta.com/appinnovation2016/");
+			}
+			if(car==2){
+				window.open("https://www.ibm.com/mx-es/");
+			}
+			if(car==3){
+				window.open("http://fepro.cs.buap.mx/2016/Convocatoria.html");
+			}
+
+
+		}
+		window.onload=inicio;
+
+	</script>
+</head>
+<body style="color:black; background-color:#D0CBCB " width="80">
+	<div id="header" style="background-color:#C32828; color:white;" link="white" vlink="white">
+		<table border="0" width="90%"  align="center" >
+			<tr height="10">
+				<td width="30%" align="left" valign="top">
+					<table width="100%" >
+						<tr>
+							<td>
+								<a href="principalcap.html" target="_self">
+									<img src="imagenes/capicono.png" width="80%" height="15%" >
+								</a>
+							</td>
+							<td>
+								<a href="http://www.upaep.mx" target="_blank">
+									<img src="imagenes/upaepicono.png" width="100%" height="30%">
+								</a>
+							</td>
+						</tr>
+					</table>
+					
+				</td>
+				<td width="60%">
+					<ul class="nav">
+						<li><a>TORNEO</a>
+							<ul>
+								<li><a href="tablascap.html" target="_self">TABLA</a></li>
+								<li><a href="estadisticascap.html" target="_self">MIS ESTADISTICAS</a></li>				
+								<li><a href="fechascap.html" target="_self">FECHAS</a></li>
+							</ul>
+						</li>
+						<li><a href="competenciascap.html" target="_self">COMPETENCIAS</a></li>
+						<li><a href="problemascap.html" target="_self">PROBLEMAS</a></li>									
+						<li><a href="temascap.html" target="_self">TEMAS</a></li>
+					</ul>
+				</td>
+				<td width="20%">
+					<table border="0" width="100%" valign="top">
+						<tr>
+							<td >
+								<a href="perfilcap.html" target="_self">
+									<img src="imagenes/perfilicono.png" width="30" height="30">
+								</a>
+							</td>
+							<td>
+								<a href="http://www.facebook.com" target="_blank">
+									<img src="imagenes/faceicono.png" width="30" height="30">
+								</a>
+							</td>
+							<td>
+								<a href="https://twitter.com/" target="_blank">
+									<img src="imagenes/twicono.png" width="30" height="30">
+								</a>
+							</td>
+							<td>
+								<a href="index.html">
+									<img src="imagenes/logout.png" width="30" height="30">
+								</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div >
+	<br>
+	<br>
+		<table border="0" width="80%" align="center" height="200" >
+			<tr height="90%">
+				<td align="center">
+					<img id="imgprincipal" src="imagenes/cartel1.png" width="90%" height="90%" onclick="pagoficial()">
+				</td>
+			</tr>
+			<tr height=10%>
+				<td align="center">
+					<input type="image" src="imagenes/botonimg.png" name="cartel1" onclick="seleccion(1)" width="15" height="15">
+					<input type="image" name="cartel1" onclick="seleccion(2)" width="15" height="15" src="imagenes/botonimg.png">
+					<input type="image" name="cartel1" onclick="seleccion(3)" width="15" height="15" src="imagenes/botonimg.png">
+				</td>
+			</tr>
+		</table>
+		<br>
+		<br>
+	</div>
+	<div style="background-color: gray ; color:white; ">
+		<br>
+		<br>
+		<table width="80%" border="0" align="center">
+			<tr height="200">
+				<td width="30%" align="center">
+					<a href="fechascap.html">
+						<img src="imagenes/fecha0.png" width="90%" height="150">
+					</a>
+				</td>
+				<td width="30%">
+					<p>
+						<br>Fecha numero:0
+						<br>Lugar: CUC-204
+						<br>Fecha: 07/09/2016
+					</p>
+				</td>
+				<td rowspan="2" width="30%">
+					<p><h1>Primeros Lugares</h1></p>
+					<table border="0" align="left">
+						<tr>
+							<td>
+								<p>Avanzados:</p>
+								<ol>
+									<li>Jose perez</li>
+									<li>Pedro ramirez</li>
+									<li>Pablo gonzales</li>
+								</ol>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Medios:</p>
+								<ol>
+									<li>Jose perez</li>
+									<li>Pedro ramirez</li>
+									<li>Pablo gonzales</li>
+								</ol>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Principiantes</p>
+								<ol>
+									<li>Jose perez</li>
+									<li>Pedro ramirez</li>
+									<li>Pablo gonzales</li>
+								</ol>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr >
+				<td width="30%" align="center">
+					<a href="fechascap.html">
+						<img src="imagenes/fecha1.png" width="90%" height="150">
+					</a>
+				</td>
+				<td width="20%">
+					<p>
+						<br>Fecha numero:1
+						<br>Lugar: CUC-204
+						<br>Fecha: 14/09/2016
+					</p>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<br>
+	</div>
+	<div>
+		<br>
+		<br>
+		<table width="80%" border="0" align="center">
+			<tr>
+				<td width="30%">
+					<img src="imagenes/presidentes.png" height="50">
+					<p>
+						<br>Juan Alberto Gutierrez Canto
+						<br>Tel:248-108-8793
+						<br>emal: juanalberto.gutierrez@upaep.edu.mx
+					</p>
+				</td>
+				<td width="30%">
+					<img src="imagenes/presidentes.png" height="50">
+					<p>
+						<br>Pepe perez perez
+						<br>Tel:222-222-2222
+						<br>emal: example@gmal.com
+					</p>
+				</td>
+				<td width="30%">
+					<img src="imagenes/presidentes.png" height="50">
+					<p>
+						<br>Pepe perez perez
+						<br>Tel:222-222-2222
+						<br>emal: example@gmal.com
+					</p>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<br>
+	</div>
+	<footer style="background-color: grey;color: white ;align:center" >
+		<h2 align="center">Reference of production, especification the Academic Chapter </h2>
+	</footer>
+</body>
+</html> 
